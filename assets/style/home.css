@@ -1,0 +1,48 @@
+body
+{
+    height: 200vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.659), rgba(0, 0, 0, 0.34)), 
+    url("img/homegif.gif"); 
+    
+    background-image:linear-gradient(rgba(0, 0, 0, 0.659), rgba(0, 0, 0, 0.34)),url('/img/homegif.gif'); background-repeat:repeat; 
+    background-size: 1600px;
+}
+
+body::-webkit-scrollbar {
+    display: none; 
+}
+
+.link-light, .nav-link
+{
+    color: rgba(255, 255, 255, 0.597);
+    text-decoration: none;
+}
+
+.nav-link:not(.home):hover
+{
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+a
+{
+    color:white;
+}
+
+
+.home, .home:hover
+{
+    color:white;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+
+.homevid
+{
+    position: fixed;
+    right: 0px;
+    left: -130px;
+    width: 120%;
+    height: 120%;
+    z-index: -1;
+}

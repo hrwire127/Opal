@@ -1,0 +1,33 @@
+<% layout('layout/biolerplate') %>
+        <div class="container d-flex justify-content-center align-items-center mt-2 mb-5">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+                    <div class="card shadow">
+                        <img src="https://res.cloudinary.com/dnu6yyl9d/image/upload/v1636809635/Opal/jid4qim6qozvzi4bvi8j.jpg"
+                            alt="" class="card-img-top" />
+                        <div class="card-body">
+                            <h5 class="card-title">Login</h5>
+                            <form action="/auth/login" method="POST" class="validated-form" novalidate>
+                                <div class="mb-3">
+                                    <label class="form-label" for="username">Username</label>
+                                    <input class="form-control" type="text" id="username" name="username" autofocus
+                                        required>
+                                    <div class="valid-feedback">
+                                        Good!
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label" for="password">Password</label>
+                                    <input class="form-control" type="password" id="password" name="password" required>
+                                    <div class="valid-feedback">
+                                        Good!
+                                    </div>
+                                </div>
+                                <button class="btn btn-success btn-block">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

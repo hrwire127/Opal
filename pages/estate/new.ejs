@@ -1,0 +1,51 @@
+<% layout('layout/biolerplate') %>
+    <div class="row">
+        <h1 class="text-center">New Estate</h1>
+        <div class="col-6 offset-3">
+            <form action="/estates" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Title</label>
+                    <input class="form-control" type="text" id="title" name="estate[title]" required>
+                    <div class="valid-feedback">
+                        Good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="location">Location</label>
+                    <input class="form-control" type="text" id="location" name="estate[location]" required>
+                    <div class="valid-feedback">
+                        Good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Add Images</label>
+                    <input class="form-control" name="image" type="file" id="image" multiple>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="price" id="price-label">Price</label>
+                    <div class="input-group">
+
+                        <span class="input-group-text" id="price">$</span>
+                        <input type="text" id="price" class="form-control" placeholder="0.00"
+                            aria-describedby="price-label" name="estate[price]" required>
+                    </div>
+                    <div class="valid-feedback">
+                        Good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="description">Description Url</label>
+                    <textarea class="form-control" type="text" id="description" name="estate[description]" required></textarea>
+                    <div class="valid-feedback">
+                        Good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-success">Submit</button>
+                </div>
+            </form>
+            <a href="/estates">Back</a>
+        </div>
+    </div>
+
+    

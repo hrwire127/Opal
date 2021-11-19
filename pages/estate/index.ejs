@@ -1,0 +1,39 @@
+<% layout('layout/biolerplate') %>
+<div id="cluster-map"></div>
+    <h1 class="offset-4 mb-5">All ESTATES</h1>
+    <% for(let estate of estates) {%>
+        <div class="card mb-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <% if(estate.images.length) {%>
+                        <img class="img-fluid" alt="" src="<%=estate.images[0].url%>">
+                        <% } else { %>
+                            <img src="https://res.cloudinary.com/dnu6yyl9d/image/upload/v1636809634/Opal/anqa08zyht82uiv8wb7x.jpg" alt="">
+                            <% } %>
+
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%=estate.title%>
+                        </h5>
+                        <p class="card-text">
+                            <%=estate.description%>
+                        </p>
+                        <p class="card-text">
+                            <small class="text-muted">
+                                <%=estate.location%>
+                            </small>
+                        </p>
+                        <a href="/estates/<%=estate._id%>" class="btn btn-primary">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% } %>
+        <script>
+            const mapToken = '<%-process.env.MAPBOX_TOKEN%>'
+            const estates = {features: <%-JSON.stringify(estates)%>}
+        </script>
+
+        <script src="/js/clusterMap.js"></script>
